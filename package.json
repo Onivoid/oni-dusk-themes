@@ -1,0 +1,91 @@
+{
+  "name": "oni-themes",
+  "displayName": "Oni Themes",
+  "publisher": "Onivoid",
+  "description": "Soft pastel dusk themes with neon accents — inspired by Bearded Black & Gems",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Onivoid/oni-themes"
+  },
+  "engines": {
+    "vscode": "^1.128.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "themes": [
+      {
+        "label": "Oni Lime",
+        "uiTheme": "vs-dark",
+        "path": "./themes/oni-lime.json"
+      },
+      {
+        "label": "Oni Blurple",
+        "uiTheme": "vs-dark",
+        "path": "./themes/oni-blurple.json"
+      },
+      {
+        "label": "Oni Cyan",
+        "uiTheme": "vs-dark",
+        "path": "./themes/oni-cyan.json"
+      },
+      {
+        "label": "Oni Magenta",
+        "uiTheme": "vs-dark",
+        "path": "./themes/oni-magenta.json"
+      },
+      {
+        "label": "Oni Amber",
+        "uiTheme": "vs-dark",
+        "path": "./themes/oni-amber.json"
+      },
+      {
+        "label": "Oni Coral",
+        "uiTheme": "vs-dark",
+        "path": "./themes/oni-coral.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "oni-themes.helloWorld",
+        "title": "Hello World"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run package",
+    "compile": "pnpm run check-types && pnpm run lint && node esbuild.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "package": "pnpm run check-types && pnpm run lint && node esbuild.js --production",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "pnpm run compile-tests && pnpm run compile && pnpm run lint",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.128.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "24.x",
+    "typescript-eslint": "^8.61.1",
+    "eslint": "^10.5.0",
+    "esbuild": "^0.28.1",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^6.0.3",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.0.0"
+  },
+  "overrides": {
+    "diff": "^8.0.4",
+    "serialize-javascript": "^7.0.6"
+  },
+  "packageManager": "pnpm@10.28.2+sha512.41872f037ad22f7348e3b1debbaf7e867cfd448f2726d9cf74c08f19507c31d2c8e7a11525b983febc2df640b5438dee6023ebb1f84ed43cc2d654d2bc326264"
+}
