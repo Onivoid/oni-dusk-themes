@@ -2,7 +2,7 @@
 
 Dark themes for VS Code & Cursor — soft pastel dusk base, neon accent variants.
 
-Inspired by [Bearded Theme](https://github.com/BeardedBear/bearded-theme) (Black & Gems), with a distinct atmosphere and brighter accents.
+Based on / strongly inspired by [Bearded Theme](https://github.com/BeardedBear/bearded-theme) (Black & Gems) by [BeardedBear](https://github.com/BeardedBear), with a distinct dusk atmosphere and brighter neon accents.
 
 ![Oni Themes preview](./OniThemes.png)
 
@@ -33,7 +33,6 @@ Shared base: **Oni Dusk** — soft mauve charcoal. Syntax colors stay gem-like a
 git clone https://github.com/Onivoid/oni-themes.git
 cd oni-themes
 pnpm install
-pnpm run compile
 ```
 
 Then press **F5** (Extension Development Host), or use **Developer: Install Extension from Location…**
@@ -42,6 +41,20 @@ Then press **F5** (Extension Development Host), or use **Developer: Install Exte
 
 `Cmd+K Cmd+T` (Mac) / `Ctrl+K Ctrl+T` (Windows/Linux) → select **Oni Lime**, **Oni Blurple**, etc.
 
+## Release
+
+1. Bump `version` in `package.json` (e.g. `0.1.0`)
+2. Commit, then tag and push:
+
+```bash
+git tag v0.1.0
+git push origin v0.1.0
+```
+
+GitHub Actions packages the `.vsix` and attaches it to the release.
+
 ## License
 
-[MIT](./LICENSE) © Onivoid
+[GPL-3.0](./LICENSE) © Onivoid
+
+This project incorporates work derived from [Bearded Theme](https://github.com/BeardedBear/bearded-theme), © BeardedBear, licensed under the [GNU GPL v3](https://github.com/BeardedBear/bearded-theme/blob/master/LICENSE.txt).

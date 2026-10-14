@@ -1,9 +1,7 @@
-# Change Log
+# Changelog
 
-All notable changes to the "oni-themes" extension will be documented in this file.
+## [0.1.0] — 2026-10-14
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-
-- Initial release
+- Initial release: Oni Lime, Blurple, Cyan, Magenta, Amber, Coral
+- Soft pastel dusk base with neon accents
+- Licensed under GPL-3.0 (attribution to Bearded Theme)
