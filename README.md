@@ -43,15 +43,27 @@ Then press **F5** (Extension Development Host), or use **Developer: Install Exte
 
 ## Release
 
-1. Bump `version` in `package.json` (e.g. `0.1.0`)
+1. Bump `version` in `package.json` (e.g. `0.2.0`)
 2. Commit, then tag and push:
 
 ```bash
-git tag v0.1.0
-git push origin v0.1.0
+git tag v0.2.0
+git push origin v0.2.0
 ```
 
-GitHub Actions packages the `.vsix` and attaches it to the release.
+GitHub Actions (environment `openvsx`) will:
+- package the `.vsix`
+- publish it to [Open VSX](https://open-vsx.org/extension/onivoid/oni-themes) via [Trusted Publishing](https://github.com/eclipse-openvsx/openvsx/wiki/Trusted-Publishing)
+- attach the `.vsix` to the GitHub Release
+
+Trusted Publisher registration (Open VSX → Settings → Trusted Publishers):
+
+| Field | Value |
+|-------|--------|
+| Owner | `Onivoid` |
+| Repository | `oni-themes` |
+| Workflow | `release.yml` |
+| Environment | `openvsx` |
 
 ## License
 

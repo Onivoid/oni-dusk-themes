@@ -1,7 +1,7 @@
 {
   "name": "oni-themes",
   "displayName": "Oni Themes",
-  "publisher": "Onivoid",
+  "publisher": "onivoid",
   "description": "Soft pastel dusk themes with neon accents — inspired by Bearded Black & Gems",
   "version": "0.1.0",
   "license": "GPL-3.0-only",
@@ -50,10 +50,12 @@
     ]
   },
   "scripts": {
-    "vsix": "vsce package --no-dependencies"
+    "vsix": "vsce package --no-dependencies",
+    "publish:ovsx": "ovsx publish --trusted-publishing"
   },
   "devDependencies": {
-    "@vscode/vsce": "^3.7.1"
+    "@vscode/vsce": "^3.7.1",
+    "ovsx": "^1.2.0"
   },
   "packageManager": "pnpm@10.28.2+sha512.41872f037ad22f7348e3b1debbaf7e867cfd448f2726d9cf74c08f19507c31d2c8e7a11525b983febc2df640b5438dee6023ebb1f84ed43cc2d654d2bc326264"
 }
