@@ -1,14 +1,14 @@
 {
   "name": "oni-dusk-themes",
-  "displayName": "Oni Themes",
+  "displayName": "Oni Dusk Themes",
   "publisher": "onivoid",
   "description": "Soft pastel dusk themes with neon accents — inspired by Bearded Black & Gems",
-  "version": "0.3.0",
+  "version": "0.4.2",
   "license": "GPL-3.0-only",
   "icon": "logo.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Onivoid/oni-themes"
+    "url": "https://github.com/Onivoid/oni-dusk-themes"
   },
   "engines": {
     "vscode": "^1.128.0"

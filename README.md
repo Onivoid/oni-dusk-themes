@@ -1,10 +1,15 @@
-# Oni Themes
+# Oni Dusk Themes
 
 Dark themes for VS Code & Cursor — soft pastel dusk base, neon accent variants.
 
 Based on / strongly inspired by [Bearded Theme](https://github.com/BeardedBear/bearded-theme) (Black & Gems) by [BeardedBear](https://github.com/BeardedBear), with a distinct dusk atmosphere and brighter neon accents.
 
-![Oni Themes preview](./OniThemes.png)
+![Oni Dusk Themes preview](./OniThemes.png)
+
+| | |
+|---|---|
+| **Extension id** | `onivoid.oni-dusk-themes` |
+| **Display name** | Oni Dusk Themes |
 
 ## Themes
 
@@ -21,60 +26,62 @@ Shared base: **Oni Dusk** — soft mauve charcoal. Syntax colors stay gem-like a
 
 ## Install
 
-**Extension id:** `onivoid.oni-dusk-themes`  
-*(l’ancien id `oni-themes` est réservé sur le Marketplace Microsoft après un Remove — d’où ce nouveau nom technique ; le nom affiché reste **Oni Themes**.)*
+### VS Code (Microsoft Marketplace)
 
-- **VS Code** : Marketplace → cherche « Oni Themes » (`onivoid.oni-dusk-themes`)
-- **Cursor** : [Open VSX](https://open-vsx.org/extension/onivoid/oni-dusk-themes) ou VSIX depuis les [Releases](https://github.com/Onivoid/oni-themes/releases)
+1. Open **Extensions** (`Cmd+Shift+X` / `Ctrl+Shift+X`)
+2. Search for **Oni Dusk Themes**
+3. Click **Install**
+4. Open the theme picker (`Cmd+K Cmd+T` / `Ctrl+K Ctrl+T`) and choose a variant
 
-### From a VSIX
+Direct link: [marketplace.visualstudio.com](https://marketplace.visualstudio.com/items?itemName=onivoid.oni-dusk-themes)
 
-1. Download the latest `.vsix` from [Releases](https://github.com/Onivoid/oni-themes/releases)
-2. **Extensions** → `⋯` → **Install from VSIX…**
-3. **Preferences: Color Theme** → choose an Oni variant
+### Cursor (Open VSX)
 
-### From source (dev)
+1. Open **Extensions** (`Cmd+Shift+X` / `Ctrl+Shift+X`)
+2. Search for **Oni Dusk Themes**
+3. Click **Install**
+4. Open the theme picker (`Cmd+K Cmd+T` / `Ctrl+K Ctrl+T`) and choose a variant
 
-```bash
-git clone https://github.com/Onivoid/oni-themes.git
-cd oni-themes
-pnpm install
-```
+Direct link: [open-vsx.org](https://open-vsx.org/extension/onivoid/oni-dusk-themes)
 
-Then press **F5** (Extension Development Host), or use **Developer: Install Extension from Location…**
+### From a VSIX (either editor)
+
+1. Download the latest `.vsix` from [GitHub Releases](https://github.com/Onivoid/oni-dusk-themes/releases)
+2. Extensions → `⋯` → **Install from VSIX…**
+3. Pick the file, then select a theme as above
 
 ## Usage
 
-`Cmd+K Cmd+T` (Mac) / `Ctrl+K Ctrl+T` (Windows/Linux) → select **Oni Lime**, **Oni Blurple**, etc.
+`Cmd+K Cmd+T` (Mac) / `Ctrl+K Ctrl+T` (Windows/Linux) → **Oni Lime**, **Oni Blurple**, **Oni Cyan**, **Oni Magenta**, **Oni Amber**, or **Oni Coral**.
 
-## Release
-
-1. Bump `version` in `package.json`
-2. Commit, tag and push:
+## Develop
 
 ```bash
-git tag v0.3.0
-git push origin v0.3.0
+git clone https://github.com/Onivoid/oni-dusk-themes.git
+cd oni-dusk-themes
+pnpm install
 ```
 
-CI (environment `openvsx`) : VSIX → Open VSX → VS Marketplace (si `VSCE_PAT`) → GitHub Release.
+Press **F5** (Extension Development Host), or use **Developer: Install Extension from Location…**.
 
-### Open VSX — Trusted Publisher
+## Release (maintainers)
 
-À (re)créer pour l’extension **`oni-dusk-themes`** (le Trusted Publisher est par extension) :
+1. Bump `version` in `package.json` and update `CHANGELOG.md`
+2. Commit, tag, and push:
 
-| Field | Value |
-|-------|--------|
+```bash
+git tag v0.4.2
+git push origin v0.4.2
+```
+
+CI (GitHub environment `openvsx`) packages the VSIX, publishes to **Open VSX** (Trusted Publishing) and **VS Marketplace** (if `VSCE_PAT` is set), then creates the GitHub Release.
+
+| Open VSX Trusted Publisher | Value |
+|----------------------------|--------|
 | Owner | `Onivoid` |
-| Repository | `oni-themes` |
+| Repository | `oni-dusk-themes` |
 | Workflow | `release.yml` |
 | Environment | `openvsx` |
-
-**Première publish** de ce nouvel id : une fois avec un PAT Open VSX, puis Trusted Publishing.
-
-### VS Marketplace — `VSCE_PAT` (optionnel)
-
-Publisher `onivoid`, secret sur l’environment `openvsx`.
 
 ## License
 
