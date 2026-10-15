@@ -21,11 +21,17 @@ Shared base: **Oni Dusk** — soft mauve charcoal. Syntax colors stay gem-like a
 
 ## Install
 
-### From a VSIX (recommended for Cursor)
+**Extension id:** `onivoid.oni-dusk-themes`  
+*(l’ancien id `oni-themes` est réservé sur le Marketplace Microsoft après un Remove — d’où ce nouveau nom technique ; le nom affiché reste **Oni Themes**.)*
+
+- **VS Code** : Marketplace → cherche « Oni Themes » (`onivoid.oni-dusk-themes`)
+- **Cursor** : [Open VSX](https://open-vsx.org/extension/onivoid/oni-dusk-themes) ou VSIX depuis les [Releases](https://github.com/Onivoid/oni-themes/releases)
+
+### From a VSIX
 
 1. Download the latest `.vsix` from [Releases](https://github.com/Onivoid/oni-themes/releases)
-2. In Cursor / VS Code: **Extensions** → `⋯` → **Install from VSIX…**
-3. Pick the file, then **Preferences: Color Theme** → choose an Oni variant
+2. **Extensions** → `⋯` → **Install from VSIX…**
+3. **Preferences: Color Theme** → choose an Oni variant
 
 ### From source (dev)
 
@@ -43,20 +49,19 @@ Then press **F5** (Extension Development Host), or use **Developer: Install Exte
 
 ## Release
 
-1. Bump `version` in `package.json` (e.g. `0.2.0`)
-2. Commit, then tag and push:
+1. Bump `version` in `package.json`
+2. Commit, tag and push:
 
 ```bash
-git tag v0.2.0
-git push origin v0.2.0
+git tag v0.3.0
+git push origin v0.3.0
 ```
 
-GitHub Actions (environment `openvsx`) will:
-- package the `.vsix`
-- publish it to [Open VSX](https://open-vsx.org/extension/onivoid/oni-themes) via [Trusted Publishing](https://github.com/eclipse-openvsx/openvsx/wiki/Trusted-Publishing)
-- attach the `.vsix` to the GitHub Release
+CI (environment `openvsx`) : VSIX → Open VSX → VS Marketplace (si `VSCE_PAT`) → GitHub Release.
 
-Trusted Publisher registration (Open VSX → Settings → Trusted Publishers):
+### Open VSX — Trusted Publisher
+
+À (re)créer pour l’extension **`oni-dusk-themes`** (le Trusted Publisher est par extension) :
 
 | Field | Value |
 |-------|--------|
@@ -64,6 +69,12 @@ Trusted Publisher registration (Open VSX → Settings → Trusted Publishers):
 | Repository | `oni-themes` |
 | Workflow | `release.yml` |
 | Environment | `openvsx` |
+
+**Première publish** de ce nouvel id : une fois avec un PAT Open VSX, puis Trusted Publishing.
+
+### VS Marketplace — `VSCE_PAT` (optionnel)
+
+Publisher `onivoid`, secret sur l’environment `openvsx`.
 
 ## License
 

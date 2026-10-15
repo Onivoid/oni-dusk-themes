@@ -1,5 +1,5 @@
 {
-  "name": "oni-themes",
+  "name": "oni-dusk-themes",
   "displayName": "Oni Themes",
   "publisher": "onivoid",
   "description": "Soft pastel dusk themes with neon accents — inspired by Bearded Black & Gems",
@@ -52,7 +52,8 @@
   },
   "scripts": {
     "vsix": "vsce package --no-dependencies",
-    "publish:ovsx": "ovsx publish --trusted-publishing"
+    "publish:ovsx": "ovsx publish --trusted-publishing",
+    "publish:marketplace": "vsce publish --no-dependencies"
   },
   "devDependencies": {
     "@vscode/vsce": "^3.7.1",
